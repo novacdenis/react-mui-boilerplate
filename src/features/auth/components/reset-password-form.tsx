@@ -37,7 +37,12 @@ export const ResetPasswordForm: React.FC<ResetPasswordFormProps> = ({ token }) =
         Please enter your new password and confirm it to reset your password.
       </Typography>
 
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        noValidate
+        onSubmit={(e) => {
+          void form.handleSubmit(onSubmit)(e);
+        }}
+      >
         <Controller
           control={form.control}
           name="password"

@@ -37,7 +37,12 @@ export const RegisterForm: React.FC = () => {
         Register for an account using an invitation token, your email, and a password.
       </Typography>
 
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        noValidate
+        onSubmit={(e) => {
+          void form.handleSubmit(onSubmit)(e);
+        }}
+      >
         <Controller
           control={form.control}
           name="invitation_token"

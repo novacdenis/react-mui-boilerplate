@@ -60,7 +60,12 @@ export const ForgotPasswordForm: React.FC = () => {
         Please enter your email and we will send you instructions on how to reset your password.
       </Typography>
 
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        noValidate
+        onSubmit={(e) => {
+          void form.handleSubmit(onSubmit)(e);
+        }}
+      >
         <Controller
           control={form.control}
           name="email"

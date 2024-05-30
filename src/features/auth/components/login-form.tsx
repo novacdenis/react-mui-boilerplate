@@ -43,7 +43,12 @@ export const LoginForm: React.FC = () => {
         Sign in to your account using your registered email and password.
       </Typography>
 
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        noValidate
+        onSubmit={(e) => {
+          void form.handleSubmit(onSubmit)(e);
+        }}
+      >
         <Controller
           control={form.control}
           name="email"
@@ -106,7 +111,7 @@ export const LoginForm: React.FC = () => {
         </Button>
 
         <Typography variant="body1" sx={{ mt: 2, textAlign: "center" }}>
-          Don't have an account? <Link href="/auth/register">Register</Link>
+          Don&apos;t have an account? <Link href="/auth/register">Register</Link>
         </Typography>
       </form>
     </>

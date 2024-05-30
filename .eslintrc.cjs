@@ -1,22 +1,42 @@
 module.exports = {
   root: true,
-  env: { node: true, browser: true, es2020: true },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  env: {
+    node: true,
+    browser: true,
+    es2020: true,
+  },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "prettier",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@tanstack/eslint-plugin-query/recommended",
+    "prettier",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
+    tsconfigRootDir: __dirname,
+  },
   plugins: ["react-refresh", "prettier", "import"],
   rules: {
-    "@typescript-eslint/no-unused-vars": "warn",
-
+    "react/prop-types": "off",
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+
     "prettier/prettier": "warn",
     "no-console": ["warn", { allow: ["warn", "error"] }],
+
+    "@typescript-eslint/no-unused-vars": "warn",
 
     "import/order": [
       "warn",
