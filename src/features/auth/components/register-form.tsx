@@ -34,7 +34,7 @@ export const RegisterForm: React.FC = () => {
         Register
       </Typography>
       <Typography variant="body1" sx={{ mt: 0.5 }}>
-        Register for an account using an invitation token, your email, and a password.
+        Register an account using an invitation token, email address, and password.
       </Typography>
 
       <form
