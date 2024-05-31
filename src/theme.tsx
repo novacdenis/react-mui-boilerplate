@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes, type LinkProps } from "@mui/material";
 
-import { LinkBehavior } from "./components/ui";
+import { LinkBehavior } from "./components/ui/link-behavior";
 
 export const theme = responsiveFontSizes(
   createTheme({

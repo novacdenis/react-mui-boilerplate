@@ -18,19 +18,19 @@ export const ForgotPasswordForm: React.FC = () => {
     },
     resolver: zodResolver(schema),
   });
-  const [isResetLinkSent, setIsResetLinkSent] = React.useState(false);
+  const [isResetEmailSent, setIsResetEmailSent] = React.useState(false);
 
   const onSubmit = (values: ForgotPasswordBody) => {
     console.log(values);
-    setIsResetLinkSent(true);
+    setIsResetEmailSent(true);
   };
 
   const onResendEmail = () => {
     form.reset(undefined, { keepValues: true });
-    setIsResetLinkSent(false);
+    setIsResetEmailSent(false);
   };
 
-  if (isResetLinkSent) {
+  if (isResetEmailSent) {
     return (
       <>
         <Typography component="h1" variant="h6" fontWeight="bolder">

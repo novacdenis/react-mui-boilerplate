@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
-import { AuthLayout } from "@/components/layouts";
-import { RouteLoadingIndicator } from "@/components/shared";
+import { AuthLayout } from "@/components/layouts/auth-layout";
+import { RouteLoadingIndicator } from "@/components/shared/route-loading-indicator";
 
 export const router = createBrowserRouter([
   {

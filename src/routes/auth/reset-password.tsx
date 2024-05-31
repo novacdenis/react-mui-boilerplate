@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { Button, Link, Typography } from "@mui/material";
 import { isPast } from "date-fns";
-import { ResetPasswordForm } from "@/features/auth";
+import { ResetPasswordForm } from "@/features/auth/components/reset-password-form";
 
 export const Component: React.FC = () => {
   const [searchParams] = useSearchParams();
