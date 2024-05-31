@@ -35,15 +35,6 @@ module.exports = {
 
     "prettier/prettier": "warn",
     "no-console": ["warn", { allow: ["warn", "error"] }],
-    "no-restricted-imports": [
-      "error",
-      {
-        paths: [
-          // material-ui
-          { name: "@mui/material", message: "No named imports from '@mui/material'" },
-        ],
-      },
-    ],
 
     "@typescript-eslint/no-unused-vars": "warn",
 
