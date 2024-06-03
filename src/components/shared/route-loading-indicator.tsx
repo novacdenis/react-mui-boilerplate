@@ -1,13 +1,13 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigation } from "react-router-dom";
 import { Box, CircularProgress, Fade } from "@mui/material";
 
 export const RouteLoadingIndicator: React.FC = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const navigation = useNavigation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
 
     if (navigation.state === "loading") {

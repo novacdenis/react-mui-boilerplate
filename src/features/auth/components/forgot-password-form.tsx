@@ -1,6 +1,6 @@
 import type { ForgotPasswordBody } from "../types";
 
-import React from "react";
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Link, TextField, Typography } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
@@ -18,7 +18,7 @@ export const ForgotPasswordForm: React.FC = () => {
     },
     resolver: zodResolver(schema),
   });
-  const [isResetEmailSent, setIsResetEmailSent] = React.useState(false);
+  const [isResetEmailSent, setIsResetEmailSent] = useState(false);
 
   const onSubmit = (values: ForgotPasswordBody) => {
     console.log(values);
