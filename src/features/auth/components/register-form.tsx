@@ -25,6 +25,7 @@ export const RegisterForm: React.FC = () => {
   });
 
   const onSubmit = (values: RegisterBody) => {
+    // eslint-disable-next-line no-console
     console.log(values);
   };
 

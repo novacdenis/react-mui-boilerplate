@@ -25,6 +25,7 @@ export const ResetPasswordForm: React.FC<ResetPasswordFormProps> = ({ token }) =
   });
 
   const onSubmit = (values: ResetPasswordBody) => {
+    // eslint-disable-next-line no-console
     console.log(values, token);
   };
 

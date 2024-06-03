@@ -21,6 +21,7 @@ export const ForgotPasswordForm: React.FC = () => {
   const [isResetEmailSent, setIsResetEmailSent] = useState(false);
 
   const onSubmit = (values: ForgotPasswordBody) => {
+    // eslint-disable-next-line no-console
     console.log(values);
     setIsResetEmailSent(true);
   };

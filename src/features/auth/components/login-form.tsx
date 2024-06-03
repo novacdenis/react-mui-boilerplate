@@ -31,6 +31,7 @@ export const LoginForm: React.FC = () => {
   });
 
   const onSubmit = (values: LoginBody) => {
+    // eslint-disable-next-line no-console
     console.log(values);
   };
 
