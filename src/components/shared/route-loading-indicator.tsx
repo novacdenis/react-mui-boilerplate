@@ -11,6 +11,10 @@ export const RouteLoadingIndicator: React.FC = () => {
     let timer: NodeJS.Timeout | null = null;
 
     if (navigation.state === "loading") {
+      if (timer) {
+        clearTimeout(timer);
+      }
+
       timer = setTimeout(() => setIsVisible(true), 300);
     } else {
       setIsVisible(false);
@@ -30,7 +34,7 @@ export const RouteLoadingIndicator: React.FC = () => {
           sx={{
             position: "fixed",
             inset: 0,
-            zIndex: (theme) => theme.zIndex.modal + 1,
+            zIndex: (theme) => theme.zIndex.tooltip + 1,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
